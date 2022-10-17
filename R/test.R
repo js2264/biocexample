@@ -43,3 +43,19 @@ myPaste <- function(arg1, arg2) {
 
 }
 
+myPaste2 <- function(arg1, arg2) {
+
+    ## Internal checkups
+    if (!is.character(arg1) | !is.numeric(arg2)) {
+        stop("There has been an error. Aborting now.")
+    }
+
+    ## Internal processing steps
+    res <- glue::glue(arg1, arg2)
+    res <- as.character(res)
+
+    ## Internal checkups
+    return(res)
+
+}
+
